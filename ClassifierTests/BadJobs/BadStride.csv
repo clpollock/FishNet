@@ -1,0 +1,13 @@
+Dataset,MNIST,,,,,,,
+Learning Rate,0.05,,,,,,,
+Learning Rate Decay,0.95,,,,,,,
+Minibatch,16,,,,,,,
+Epochs,20,,,,,,,
+Network,,,,,,,,
+Layer,Layer Size,Filter Count,Filter Size,Stride,Padding,Dropout,Activation,Leakiness
+Convolutional,,32,3,0,1,,ReLU,
+Max Pooling,,,,,,,,
+Convolutional,,64,5,1,2,,ReLU,
+Max Pooling,,,,,,,,
+Fully Connected,200,,,,,0.5,ReLU,
+Fully Connected,10,,,,,0,Sigmoid,

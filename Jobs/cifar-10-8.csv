@@ -1,0 +1,19 @@
+Dataset,CIFAR-10,,,,,,
+Learning Rate,0.1,,,,,,
+Learning Rate Decay,0.05,,,,,,
+Learning Rate Decay Point,1.02,,,,,,
+Minibatch,16,,,,,,
+Epochs,50,,,,,,
+,,,,,,,
+# All Sigmoid Activations,,,,,,,
+,,,,,,,
+Network,CIFAR-10-Convolutional-3-Sigmoid,,,,,,
+Layer,Layer Size,Filter Count,Filter Size,Stride,Padding,Dropout,Activation
+Convolutional,,32,3,1,1,,Sigmoid
+Max Pooling,,,,,,,
+Convolutional,,64,3,1,1,,Sigmoid
+Max Pooling,,,,,,,
+Convolutional,,128,3,1,1,,Sigmoid
+Max Pooling,,,,,,,
+Fully Connected,400,,,,,0.5,Sigmoid
+Fully Connected,10,,,,,0,Sigmoid

@@ -1,0 +1,14 @@
+Dataset,face-directions,,,,,,
+Learning Rate,0.1,,,,,,
+Learning Rate Decay,0.05,,,,,,
+Learning Rate Decay Point,0.995,,,,,,
+Minibatch,16,,,,,,
+Epochs,500,,,,,,
+,,,,,,,
+# Determine face direction,,,,,,,
+,,,,,,,
+Network,face-directions-simple,,,,,,
+Layer,Layer Size,Filter Count,Filter Size,Stride,Padding,Dropout,Activation
+Fully Connected,100,,,,,0.5,ReLU
+Fully Connected,50,,,,,0.5,ReLU
+Fully Connected,4,,,,,0,Sigmoid

@@ -1,0 +1,5 @@
+Dataset,mnist
+Learning Rate,0.05
+Learning Rate Decay,1.1
+Minibatch,16
+Epochs,60

@@ -1,0 +1,42 @@
+Dataset,CIFAR-10,,,,,,
+Learning Rate,0.1,,,,,,
+Learning Rate Decay,0.05,,,,,,
+Learning Rate Decay Point,0.995,,,,,,
+Minibatch,16,,,,,,
+Epochs,50,,,,,,
+,,,,,,,
+Network,CIFAR-10-Single-Layer,,,,,,
+Layer,Layer Size,Filter Count,Filter Size,Stride,Padding,Dropout,Activation
+Fully Connected,10,,,,,0,Sigmoid
+,,,,,,,
+Network,CIFAR-10-Two-Layer,,,,,,
+Layer,Layer Size,Filter Count,Filter Size,Stride,Padding,Dropout,Activation
+Fully Connected,400,,,,,0.5,ReLU
+Fully Connected,10,,,,,0,Sigmoid
+,,,,,,,
+Network,CIFAR-10-Convolutional-1,,,,,,
+Layer,Layer Size,Filter Count,Filter Size,Stride,Padding,Dropout,Activation
+Convolutional,,32,3,1,1,,ReLU
+Max Pooling,,,,,,,
+Fully Connected,400,,,,,0.5,ReLU
+Fully Connected,10,,,,,0,Sigmoid
+,,,,,,,
+Network,CIFAR-10-Convolutional-2,,,,,,
+Layer,Layer Size,Filter Count,Filter Size,Stride,Padding,Dropout,Activation
+Convolutional,,32,3,1,1,,ReLU
+Max Pooling,,,,,,,
+Convolutional,,64,3,1,1,,ReLU
+Max Pooling,,,,,,,
+Fully Connected,400,,,,,0.5,ReLU
+Fully Connected,10,,,,,0,Sigmoid
+,,,,,,,
+Network,CIFAR-10-Convolutional-3,,,,,,
+Layer,Layer Size,Filter Count,Filter Size,Stride,Padding,Dropout,Activation
+Convolutional,,32,3,1,1,,ReLU
+Max Pooling,,,,,,,
+Convolutional,,64,3,1,1,,ReLU
+Max Pooling,,,,,,,
+Convolutional,,128,3,1,1,,ReLU
+Max Pooling,,,,,,,
+Fully Connected,400,,,,,0.5,ReLU
+Fully Connected,10,,,,,0,Sigmoid

@@ -1,0 +1,40 @@
+Dataset,face-directions,,,,,,
+Learning Rate,0.1,,,,,,
+Learning Rate Decay,0.05,,,,,,
+Learning Rate Decay Point,0.995,,,,,,
+Minibatch,16,,,,,,
+Epochs,100,,,,,,
+,,,,,,,
+Weight Decay,0.0004,,,,,,
+,,,,,,,
+# Determine face direction,,,,,,,
+,,,,,,,
+Network,Face-directions-Conv-2,,,,,,
+Layer,Layer Size,Filter Count,Filter Size,Stride,Padding,Dropout,Activation
+Convolutional,,32,5,1,2,,ReLU
+Max Pooling,,,,,,,
+Convolutional,,64,5,1,2,,ReLU
+Max Pooling,,,,,,,
+Fully Connected,400,,,,,0.5,ReLU
+Fully Connected,4,,,,,0,Sigmoid
+,,,,,,,
+Network,Face-directions-Conv-3,,,,,,
+Layer,Layer Size,Filter Count,Filter Size,Stride,Padding,Dropout,Activation
+Convolutional,,32,5,1,2,,ReLU
+Max Pooling,,,,,,,
+Convolutional,,64,5,1,2,,ReLU
+Max Pooling,,,,,,,
+Convolutional,,64,5,1,2,,ReLU
+Fully Connected,400,,,,,0.5,ReLU
+Fully Connected,4,,,,,0,Sigmoid
+,,,,,,,
+Network,Face-directions-Conv-4,,,,,,
+Layer,Layer Size,Filter Count,Filter Size,Stride,Padding,Dropout,Activation
+Convolutional,,32,5,1,2,,ReLU
+Max Pooling,,,,,,,
+Convolutional,,64,5,1,2,,ReLU
+Max Pooling,,,,,,,
+Convolutional,,64,5,1,2,,ReLU
+Convolutional,,64,5,1,2,,ReLU
+Fully Connected,400,,,,,0.5,ReLU
+Fully Connected,4,,,,,0,Sigmoid

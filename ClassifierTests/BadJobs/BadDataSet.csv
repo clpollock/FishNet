@@ -1,0 +1,5 @@
+Dataset,death
+Learning Rate,0.05
+Learning Rate Decay,0.95
+Minibatch,16
+Epochs,60
