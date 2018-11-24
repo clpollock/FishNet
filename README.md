@@ -1,3 +1,5 @@
+# FishNet
+
 FishNet is my own implementation of a convolutional neural network system. I
 wrote it as my final project for COMP9417 Machine Learning and Data Mining
 at the University of New South Wales in Semester 1, 2018.
