@@ -402,11 +402,7 @@ void FeedForwardNetwork::Train(const ImageSet& imageSet, uint32_t epochs, uint32
 	// When we're training with dropout, we need to switch to the weights without dropout for testing.
 	for (auto& layer : _layers)
 	  layer->SwitchToTestingWeights();
-	// Avoid C++17 for now so that it can compile on the aging compilers that are available on the CSE machines.
-	// auto [numberCorrect, averageTestingCost] = TestDuringTraining(imageSet);
-	auto result = TestDuringTraining(imageSet);
-	uint32_t numberCorrect = result.first;
-	double averageTestingCost = result.second;
+	auto [numberCorrect, averageTestingCost] = TestDuringTraining(imageSet);
 	for (auto& layer : _layers)
 	  layer->SwitchToTrainingWeights();
 	// Log test results.
@@ -476,7 +472,7 @@ double FeedForwardNetwork::TrainForOneEpoch(const std::vector<Image*>& trainingD
 	if (remaining < miniBatchSize)
 	  miniBatchSize = remaining;
 
-	// If there are fewer remaing examples than background threads, some threads will be unused this time.
+	// If there are fewer remaining examples than background threads, some threads will be unused this time.
 	uint32_t backgroundWorkerCount = std::min(miniBatchSize, static_cast<uint32_t>(_backgroundThreads.size()));
 	_busyWorkerCount = backgroundWorkerCount;
 
